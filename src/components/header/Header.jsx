@@ -21,10 +21,10 @@ function Header() {
             <select
               className="
       appearance-none
-      bg-black text-white
+      bg-black/35 text-white
       border border-gray-400
       rounded-md
-      py-1 lg:pl-8 lg:pr-7
+      py-1 lg:py-1.5 lg:pl-9 lg:pr-8
       pl-7 pr-6
       cursor-pointer
       text-sm
@@ -38,7 +38,7 @@ function Header() {
             </span>
           </div>
 
-          <button className="ml-2 lg:ml-4 font-medium bg-[var(--main-color)] py-0.3 text md:py-0.5 md:px-3 px-2 text-md lg:text-lg rounded-md ">
+          <button className="ml-2 lg:ml-4 font-medium bg-[var(--main-color)] py-0.3 text md:py-0.5 md:px-3 px-2 text-md lg:text-lg rounded-md transition-all cursor-pointer  hover:bg-[var(--hover-btn)] ">
             Sign In
           </button>
         </div>

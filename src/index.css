@@ -19,3 +19,41 @@ body {
 }
 /* container */
 /* px-[2rem] lg:px-[9rem] */
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -65px;
+  left: -10%;
+  width: 100%;
+  height: 64px;
+
+  z-index: 20;
+  pointer-events: none;
+
+  background: radial-gradient(
+    120% 50% at 50% 0%,
+
+    /* red curved line */ #e50914 0%,
+    #e50914 1%,
+
+    /* center shadow */ rgba(13, 20, 47, 0.9) 22%,
+    rgba(13, 20, 47, 0.6) 32%,
+
+    /* fade out */ rgba(13, 20, 47, 0.2) 42%,
+    transparent 55%
+  );
+}
+
+.rank-number {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  font-size: 100px;
+  font-weight: 900;
+
+  color: black; /* يخلي الرقم فاضي */
+  -webkit-text-stroke: 4px white; /* البوردر الأبيض */
+
+  line-height: 1;
+}

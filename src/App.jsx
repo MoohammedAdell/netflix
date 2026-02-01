@@ -1,6 +1,12 @@
-import Header from "./components/header/Header";
+import HeroSection from "./pages/home/HeroSection";
+import Home from "./pages/home/Home";
 function App() {
-  return <Header />;
+  return (
+    <>
+     
+      <Home />
+    </>
+  );
 }
 
 export default App;
