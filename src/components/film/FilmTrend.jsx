@@ -2,7 +2,7 @@ function FilmTrend({ movie, rank, onClick }) {
   return (
     <div
       onClick={() => onClick(movie)}
-      className="relative flex items-end pl-10 cursor-pointer group"
+      className="relative flex items-end pl-10 cursor-pointer group  duration-300  hover:scale-105"
     >
       {/* الصورة */}
       <img
@@ -16,9 +16,7 @@ function FilmTrend({ movie, rank, onClick }) {
           object-cover
           rounded-md
           transition-transform
-          duration-300
           cursor-pointer
-          hover:scale-105
         "
       />
 

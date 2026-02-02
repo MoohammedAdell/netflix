@@ -2,7 +2,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function InputAndBtn() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center px-7">
       
       {/* Text */}
       <div className="text-center pb-6">
@@ -16,7 +16,7 @@ function InputAndBtn() {
         <input
           type="email"
           placeholder="Email address"
-          className="bg-black/40 py-4 px-4 w-full md:w-[320px] rounded-sm border border-white/40"
+          className="bg-black/40 py-4 px-4 w-full md:w-[500px] rounded-sm border border-white/40"
         />
 
         <button
