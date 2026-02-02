@@ -7,9 +7,13 @@ function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSignup = async (e) => {
     e.preventDefault();
+
+    if (loading) return; // يمنع الضغط أكتر من مرة
+    setLoading(true);
 
     const { error } = await supabase.auth.signUp({
       email,
@@ -21,10 +25,12 @@ function Signup() {
 
     if (error) {
       alert(error.message);
+      setLoading(false);
     } else {
       alert(
         "We’ve sent you a confirmation email. Please verify your account before logging in.",
       );
+      setLoading(false);
       navigate("/login");
     }
   };
@@ -50,8 +56,14 @@ function Signup() {
           required
         />
 
-        <button className="w-full cursor-pointer bg-red-600 py-3 rounded font-semibold">
-          Sign Up
+        <button
+          type="submit"
+          disabled={loading}
+          className={`w-full py-3 rounded font-semibold bg-red-600 ${
+            loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+          }`}
+        >
+          {loading ? "Sending..." : "Sign Up"}
         </button>
       </form>
 
