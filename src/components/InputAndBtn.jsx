@@ -5,7 +5,7 @@ function InputAndBtn() {
     <div className="flex flex-col items-center px-7">
       
       {/* Text */}
-      <div className="text-center pb-6">
+      <div className="text-center pb-6 text-">
         <p>Ready to watch? Enter your email to create or restart your</p>
         <span>membership.</span>
       </div>

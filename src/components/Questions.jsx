@@ -80,7 +80,7 @@ function Questions() {
               </button>
 
               {isOpen && (
-                <div className="px-6 py-8 text-2xl leading-relaxed border-t border-black space-y-4">
+                <div className="px-6 py-8 text-md lg:text-2xl leading-relaxed border-t border-black space-y-4">
                   {Array.isArray(item.answer) ? (
                     item.answer.map((text, i) => <p key={i}>{text}</p>)
                   ) : (
